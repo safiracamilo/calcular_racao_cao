@@ -1,20 +1,22 @@
 import numbers
 
+
 def calcularRacaoPorteP(peso):
+    try:
+        if (peso <= 0) or (peso >= 100):
+            print('Peso não permitodo: menor ou igual a 0 ou peso acima de 100: __')
 
-    if (peso <= 0) or (peso>= 100):
-        print('Peso não permitodo: menor ou igual a 0 ou peso acima de 100: __')
+        if (peso <= 0) or (peso >= 100):
+            print('Peso não permitodo: menor ou igual a 0 ou peso acima de 100')
+            return 0
+        else:
+            return peso * 0.01
+    except TypeError:  # Esse except é para validar possível teste negativo
+        return 'falha ao executar o calculo da racao'
 
-    if (peso <= 0) or (peso >= 100):
-        print('Peso não permitodo: menor ou igual a 0 ou peso acima de 100')
-        return 0
-    else:
-        resultado = peso * 0.01
-        return resultado
 
 def calcularRacaoPorteM(peso):
-
-    if (peso <= 0) or (peso>= 100):
+    if (peso <= 0) or (peso >= 100):
         print('Peso não permitodo: menor ou igual a 0 ou peso acima de 100: __')
 
     if (peso <= 0) or (peso >= 100):
@@ -24,9 +26,9 @@ def calcularRacaoPorteM(peso):
         resultado = peso * 0.02
         return resultado
 
-def calcularRacaoPorteG(peso):
 
-    if (peso <= 0) or (peso>= 100):
+def calcularRacaoPorteG(peso):
+    if (peso <= 0) or (peso >= 100):
         print('Peso não permitodo: menor ou igual a 0 ou peso acima de 100: __')
 
     if (peso <= 0) or (peso >= 100):
@@ -36,6 +38,7 @@ def calcularRacaoPorteG(peso):
         resultado = peso * 0.03
         return resultado
 
+
 if __name__ == '__main__':
 
     pesoDigitado = input('Digite o peso do cão, devendo ser maior que "0" e abaixo de "100": ')
@@ -43,7 +46,7 @@ if __name__ == '__main__':
     respostapergunta = " "
 
     while not isinstance(pesoConvertido, numbers.Real):
-       pesoDigitado = input('Digite o peso do cão, devendo ser maior que "0" e abaixo de "100": ')
+        pesoDigitado = input('Digite o peso do cão, devendo ser maior que "0" e abaixo de "100": ')
 
     print(' Escolha Uma Opção abaixo: ')
     print(' "P" - Pequeno')
@@ -66,4 +69,3 @@ if __name__ == '__main__':
         else:
             print('Opção inválida')
         exit()
-
