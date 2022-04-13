@@ -1,6 +1,5 @@
 import numbers
 
-
 def calcularRacaoPorteP(peso):
     try:
         if (peso <= 0) or (peso >= 100):
@@ -14,7 +13,6 @@ def calcularRacaoPorteP(peso):
     except TypeError:  # Esse except é para validar possível teste negativo
         return 'falha ao executar o calculo da racao'
 
-
 def calcularRacaoPorteM(peso):
     if (peso <= 0) or (peso >= 100):
         print('Peso não permitodo: menor ou igual a 0 ou peso acima de 100: __')
@@ -26,7 +24,6 @@ def calcularRacaoPorteM(peso):
         resultado = peso * 0.02
         return resultado
 
-
 def calcularRacaoPorteG(peso):
     if (peso <= 0) or (peso >= 100):
         print('Peso não permitodo: menor ou igual a 0 ou peso acima de 100: __')
@@ -37,7 +34,6 @@ def calcularRacaoPorteG(peso):
     else:
         resultado = peso * 0.03
         return resultado
-
 
 if __name__ == '__main__':
 
