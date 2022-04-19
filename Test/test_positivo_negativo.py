@@ -10,6 +10,7 @@ from main import calcularRacaoPorteP, calcularRacaoPorteM, calcularRacaoPorteG
                             ('a', 'falha ao executar o calculo da racao'),
                             ('@', 'falha ao executar o calculo da racao'),
                          ])
+# a função P pega os dados acima
 def testar_calcularRacaoPorteP(peso, resultado_esperado):
     # peso = 4
     # resultado_esperado = 0.04
